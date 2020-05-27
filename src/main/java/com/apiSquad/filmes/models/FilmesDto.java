@@ -3,6 +3,11 @@ package com.apiSquad.filmes.models;
 import java.io.Serializable;
 import java.sql.Date;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,6 +16,10 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name="TB_FILMES")
 public class FilmesDto implements Serializable {
@@ -30,7 +39,7 @@ public class FilmesDto implements Serializable {
 
 	private String 	categoria;
 
-	public long getIdentificador() {
+	/*public long getIdentificador() {
 		return identificador;
 	}
 
@@ -68,7 +77,7 @@ public class FilmesDto implements Serializable {
 
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
-	}
+	} */
 
 
 }
